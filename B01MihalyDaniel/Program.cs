@@ -11,11 +11,15 @@ namespace B01MihalyDaniel
     {
         static void Main(string[] args)
         {
-            int tomb[] = new int[];
+            int tomb = new int[];
 
-            beolvasas();
+            Beolvasas();
 
             Minimumertek();
+
+            Egyediek();
+
+            Console.ReadKey();
         }
 
         static void Minimumertek()
@@ -25,11 +29,18 @@ namespace B01MihalyDaniel
             {
                 min++;
             }
+            Console.WriteLine("A minimum: {0}", min);
         }
 
-        static void beolvasas()
-        {
+        static void Beolvasas()
+        {           
             StreamReader olvas = new StreamReader("adatok.dat");
+        }
+
+        static void Egyediek()
+        {
+            Console.WriteLine("5 osztható de 4 nem oszthatóak száma: {0}", egyedi);
+            StreamWriter iro = new StreamWriter("egyediek.txt");
         }
     }
 }
