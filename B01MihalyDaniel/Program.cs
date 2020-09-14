@@ -11,8 +11,22 @@ namespace B01MihalyDaniel
     {
         static void Main(string[] args)
         {
+            int tomb[] = new int[];
+
             beolvasas();
+
+            Minimumertek();
         }
+
+        static void Minimumertek()
+        {
+            int min = 0;
+            for (int i = 0; i > tomb.Length; i++)
+            {
+                min++;
+            }
+        }
+
         static void beolvasas()
         {
             StreamReader olvas = new StreamReader("adatok.dat");
